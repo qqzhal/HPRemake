@@ -1,0 +1,74 @@
+/****************************************添加右键样式**********************************************/
+.skin1 {border-right: buttonhighlight 1px outset; border-top: buttonhighlight 1px outset; border-left: buttonhighlight 1px outset; border-bottom: buttonhighlight 1px outset; width: 90px; visibility: hidden; position: absolute;}
+.menuitems {padding-right: 10px; padding-left: 10px;}
+/****************************************添加右键样式**********************************************/
+
+.cover{border:0px solid #FFFFFF;filter:progid:DXImageTransform.Microsoft.Shadow(color=#666666,direction=135,strength=5);}
+
+a img {border:none;}
+A:link {COLOR: #0066AA;TEXT-DECORATION: none;}
+A:hover {TEXT-DECORATION: none;}
+A:visited {color: #0066AA;text-decoration: none;}
+A:active {text-decoration: none;}
+
+hr{border-bottom-style: dotted; border-left-style: dotted; border-right-style: dotted; border-top-style: dotted; size:1px; color:black; text-shadow:none} 
+
+table{word-break:break-all}
+td.TableBody1
+{
+background-color: #FFFFFF;
+padding-left:10;
+padding-right:10;
+}
+td.TableBody2
+{
+font-weight: bold;
+font-size: 14px;
+background-color: #e4ebf1;
+padding-left:10;
+padding-right:10;
+}
+
+body 
+{ 
+	background-color:#e4ebf1;
+	margin-top:0px; 
+	margin-bottom:0px;
+	margin-left:0px; 
+	margin-right:0px; 
+}
+.tablea 
+{
+/*	background-image:url('../images/pagebgt.jpg');*/
+	background-color:#e4ebf1;
+	background-repeat:repeat-x; 
+	background-position:top;
+}
+.tableb 
+{
+/*	background-image: url(../images/pagebgf.jpg);*/
+	background-color:#e4ebf1;
+	background-repeat: repeat-x;
+	background-position:bottom;
+}
+td
+{
+	font-family:宋体,Times New Roman,Times,serif;
+	font-size:12px;
+	color:#000000;
+}
+
+#txt{
+	color:#000000;
+	font-size:18pt;
+	text-align:left;
+	line-height:180%;
+	width:100%;
+}
+.gb {
+	border: 1px solid #C0C0C0;
+	padding-top: 3px;
+	background-color:#FFFFFF;
+	font-size: 12px;
+}
+.font14 { font-size:14px; color:#000000;}

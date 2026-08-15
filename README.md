@@ -26,7 +26,7 @@ python main.py
 
 ```powershell
 cd python
-python main.py --file "book\极品家丁 禹言.txt" --compile
+python main.py --file "book\诗经 多人.txt" --compile
 ```
 
 可指定模板与输出目录：

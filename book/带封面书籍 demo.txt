@@ -1,0 +1,28 @@
+<img src=../txt/58.jpg><BR>
+
+
+<BR><font size=2>【内容简介】<BR>　　图片放在txt所在同级的pic目录下</font>
+
+
+第一卷 
+
+
+第一章 CHM反编
+chm的反编译命令：
+hh -decompile e:\  e:\《书名》.chm 
+
+
+第二章 基本格式
+<BR><font size=2>【内容简介】<BR>　　&nbsp&nbsp&nbsp&nbsp</font>
+
+
+第二卷 没了
+
+
+第三章 匹配汉字
+[\x{4e00}-\x{9fa5}]
+的确是匹配汉字不假，不过这样写简体、繁体，包括日文汉字，都被算进去了。
+
+
+第四章 添加背景音乐
+<bgsound src="music.mid" loop="-1">添加背景音乐

@@ -1,0 +1,54 @@
+<HTML><HEAD><meta http-equiv='Content-Type' content='text/html; charset=gb2312'>
+<script language=javascript src="ad.js"></script>
+<LINK href="cmfu.css" type=text/css rel=stylesheet>
+<script language=javascript src='../js/page.js'></script>
+<script language=javascript src='../js/chapter.js'></script>
+<BODY id=bkk bgColor=#e7f4fe leftMargin=5 topMargin=0>
+<TABLE cellSpacing=0 cellPadding=0 width="95%" align=center border=0 valign="top">
+ <TBODY>
+  <TR>
+    <TD class=zt style="PADDING-TOP: 15px; BORDER-BOTTOM: green 1px solid" width=180>读书在起点·创作无极限</A></TD>
+    <TD class=zt style="PADDING-TOP: 15px; BORDER-BOTTOM: green 1px solid" align=right>『&nbsp;<A href=javascript:loadurl("readall.htm")>全文阅读</A>&nbsp;&nbsp;<A href=javascript:loadurl("index.htm",-1)>返回书目</A>&nbsp;』</TD>
+  </TR>
+ </TBODY>
+</TABLE>
+<BR>
+<TABLE cellSpacing=0 cellPadding=0 width="95%" align=center border=0 valign="top">
+  <TBODY>
+  <TR>
+    <TD align=middle><BR>
+      <DIV id=content align=left><script language=javascript>loadtxt(parent.txt); setCookies("index",String(parent.txt)); setCookies("title",parent.document.title);</script></DIV></TD></TR>
+  <TR>
+    <TD class=zt align=middle><BR>
+    <script language=javascript>next("上一页","回书目","下一页",8)</script><BR><BR>
+      <DIV align=right>
+      『&nbsp;<A href=javascript:loadurl("readall.htm")>全文阅读</A>&nbsp;&nbsp;
+      <A href=javascript:loadurl("index.htm",-1)>返回书目</A>&nbsp;』</DIV></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="95%" align=center border=0 
+valign="top">
+  <TBODY>
+  <TR>
+    <TD class=tablebody1 style="BORDER-TOP: green 1px solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px" align=right width="100%">&nbsp;&nbsp; <script language=javascript src='bottom.js'></script>&nbsp;&nbsp; </TD>
+  </TR>
+  </TBODY>
+<script language="Javascript">
+function saveSet()
+{
+	parent.bcolor1=bcolor.selectedIndex;
+	parent.txtcolor1=txtcolor.selectedIndex;
+	parent.fonttype1=fonttype.selectedIndex;
+
+}
+function loadSet()
+{
+	bcolor.selectedIndex = parent.bcolor1;
+	txtcolor.selectedIndex = parent.txtcolor1;
+	fonttype.selectedIndex = parent.fonttype1;
+	
+	bkk.style.background=bcolor.options[bcolor.selectedIndex].value;
+	content.style.cssText=fonttype.options[fonttype.selectedIndex].value+';line-height: 180%;padding-left:10;padding-right:10';
+	content.style.color=txtcolor.options[txtcolor.selectedIndex].value;
+}
+loadSet();
+</script>
+</TABLE><BR></BODY></HTML>

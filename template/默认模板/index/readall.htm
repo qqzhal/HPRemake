@@ -1,0 +1,157 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="js/style.css" rel="stylesheet" type="text/css">
+<script language=javascript src="../js/page.js"></script>
+<script language=javascript src="js/change.js"></script>
+</head>
+<body onload=loadchapter()>
+<a name=top></a>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="tablea"><!--1-->
+  <tr>
+    <td>
+      <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="tableb"><!--11-->
+        <tr id=bkk>
+          <td align="center" valign="top" style="padding:30">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0"><!--111-->
+              <tr>
+                <td valign="bottom">
+                  <button id=z2 name="StranLink" onClick="location.href='#'" class="gb"><div id=anz>简体</div></button>&nbsp;
+                  <script language=javascript src="js/topoption.js"></script>
+                  <img alt=点击减小字体 style=CURSOR:hand onClick=reduce() src="images/nofollow.gif">&nbsp;
+                  <img alt=点击增大字体 style=CURSOR:hand onClick=enlarge() src="images/plus.gif">
+                </td>
+                <td align="right" valign="bottom">
+                  <a href=index.htm><img src='images/return.gif' width=85 height=19 border=0></a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr style="border-top:1px solid #666666;" size="1" noshade></td>
+              </tr>
+            </table><!--111-->
+
+            <table width="100%"><!--112-->
+              <tr>
+                <td align="center" colspan="4">
+                  <input type="button" value="点击此处复制文本到剪贴板" onClick="javascript:copyText(txt)">
+                  <br><br>说明：根据文本大小不同所需时间不同，请耐心等待至提示信息出现！
+                </td>
+              </tr>
+            </table><!--112-->
+
+            <table width="100%" cellspacing="0" cellpadding="0" border="1" bordercolor="#666666" style="border-collapse: collapse"><!--113-->
+              <script language="JavaScript">
+                  var i=0;var end=pages.length;
+                  while(i!=end){
+                    document.write("<tr>");
+                    for(nn=1;nn<6;nn++){
+                      if(i==end)
+                        if(nn==1){break}
+                        else{
+                          document.write("<td width=20% style='padding-right:4px; padding-left:4px; padding-bottom:4px; padding-top:4px'></td>")}
+                       else{
+                          if(pages[i][3]!=undefined){
+                          if(nn==1){if(pages[i][3].substr(0,1)=="<"){nn=5;i++}else{document.write("<td class=font14 align=middle colspan=5 style='padding-right:8px; padding-left:8px; padding-bottom:8px; padding-top:8px'><b>"+pages[i][3]+"</b></td></tr>");document.write("<tr><td width=20% style='padding-right:4px; padding-left:4px; padding-bottom:4px; padding-top:4px'><a href=#"+pages[i][0]+">"+pages[i][1]+"</a></td>");i++}}else document.write("<td width=20% style='padding-right:4px; padding-left:4px; padding-bottom:4px; padding-top:4px'></td>")
+                          }
+                          else{
+                            document.write("<td width=20% style='padding-right:4px; padding-left:4px; padding-bottom:4px; padding-top:4px'><a href=#"+pages[i][0]+">"+pages[i][1]+"</a></td>");
+                            i++;
+                          }
+                       }
+                    }
+                    document.write("</tr>")
+                  }
+                  
+                  function copyText(obj){var rng=document.body.createTextRange();rng.moveToElementText(obj);rng.select();rng.execCommand('Copy');alert('复制完成，请自行粘贴到文本编辑软件！');}
+              </script>
+            </table><!--113-->
+            <br>
+            <div id="txt">
+              <script language=javascript>
+                for(i=0;i<end;i++){loadtxt(i)}
+                function gotoNextPage(){
+                  if(window.event.keyCode==13)
+                    document.location='index.htm';
+                }
+                document.onkeydown=gotoNextPage;
+              </script>
+            </div><br>
+            
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="2"><hr style="border-top:1px solid #666666;" size="1" noshade></td>
+              </tr>
+              <tr valign="top">
+                <td class="font14"></td>
+                <td align="right"><a href=index.htm><img src='images/return.gif' width=85 height=19 border=0></a></td>
+              </tr>
+              <tr>
+                <td><BR><BR><BR>
+              </tr>
+            </table><!--11-->
+    		</td>
+  		</tr>
+      </table>
+    </td>
+  </tr>
+</table><!--1-->
+<div id=anx><script language=javascript src="js/gb.js" type=text/javascript></script></div>
+<!--*******************************添加右键************************************-->
+<script language=javascript>
+var menuskin = "skin1";
+function showmenuie5() {
+var rightedge = document.body.clientWidth-event.clientX;
+var bottomedge = document.body.clientHeight-event.clientY;
+if (rightedge < ie5menu.offsetWidth)
+ie5menu.style.left = document.body.scrollLeft + event.clientX - ie5menu.offsetWidth;
+else
+ie5menu.style.left = document.body.scrollLeft + event.clientX;
+if (bottomedge < ie5menu.offsetHeight)
+ie5menu.style.top = document.body.scrollTop + event.clientY - ie5menu.offsetHeight;
+else
+ie5menu.style.top = document.body.scrollTop + event.clientY;
+ie5menu.style.visibility = "visible";
+return false;
+}
+function jumptoie5() {
+if (event.srcElement.className == "menuitems") {
+if (event.srcElement.getAttribute("target") != null)
+window.open(event.srcElement.url, event.srcElement.getAttribute("target"));
+else
+window.location = event.srcElement.url;
+   }
+}
+function hidemenuie5() {
+ie5menu.style.visibility = "hidden";
+}
+</script>
+<div id="ie5menu" onclick="jumptoie5()">
+<div>
+<table height="100%" width="100%" border="0" cellpadding="5" cellpadding="0" bgcolor="FFFFFF">
+    <tr>
+        <td onclick="javascript:loadurl('index.htm')" onMouseOver="this.bgColor='#C9C9C9'" onMouseOut="this.bgColor='#e4ebf1'" style="cursor:hand" align="center" valign="center" bgcolor="#e4ebf1"><font color="#003366">回书目　&#8596;</font></td>
+    </tr> 
+    <tr>
+        <td onclick="javascript:loadurl('#top')" onMouseOver="this.bgColor='#C9C9C9'" onMouseOut="this.bgColor='#e4ebf1'" style="cursor:hand" align="center" valign="center" bgcolor="#e4ebf1"><font color="#003366">回顶部　↑</font></td>
+    </tr> 
+    <tr>
+        <td onclick="javascript:loadurl('#bottom')" onMouseOver="this.bgColor='#C9C9C9'" onMouseOut="this.bgColor='#e4ebf1'" style="cursor:hand" align="center" valign="center" bgcolor="#e4ebf1"><font color="#003366">回底部　↓</font></td>
+    </tr> 
+    <tr>
+        <td onclick="javascript:copyText(txt)" onMouseOver="this.bgColor='#C9C9C9'" onMouseOut="this.bgColor='#e4ebf1'" style="cursor:hand" align="center" valign="center" bgcolor="#e4ebf1"><font color="#003366">复制文本</font></td>
+    </tr> 
+</table>
+</div>
+</div>
+<script language=javascript>
+if (document.all  &&  window.print)
+{
+    ie5menu.className = menuskin;
+    document.oncontextmenu = showmenuie5;
+    document.body.onclick = hidemenuie5;
+}
+</script>
+<!--*******************************添加右键************************************-->
+<a name=bottom></a>
+</body>
+</html>

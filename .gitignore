@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+Ebook/
+settings/
+build/
+dist/

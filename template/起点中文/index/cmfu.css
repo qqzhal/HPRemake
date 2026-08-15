@@ -1,0 +1,11 @@
+.cover{border:0px solid #FFFFFF;filter:progid:DXImageTransform.Microsoft.Shadow(color=#666666,direction=135,strength=5);}
+table{word-break:break-all}
+TD {FONT-FAMILY: "宋体", "Verdana", "Arial", "Helvetica", "sans-serif";FONT-SIZE: 9pt}
+.tablebody1 {FONT-SIZE: 9pt; LINE-HEIGHT: 150%; FONT-FAMILY: "宋体", "Arial", "MS Sans Serif"}
+.tablebody2 {FONT-SIZE: 9pt; LINE-HEIGHT: 150%; FONT-FAMILY: "宋体", "Arial", "MS Sans Serif";background-color: #e3e3e3;}
+.zt {FONT-SIZE: 10.5pt; LINE-HEIGHT: 160%; FONT-FAMILY: "宋体","verdana","Arial","MS Sans Serif"}
+.content {FONT-SIZE: 12pt;line-height: 180%;padding-left:10;padding-right:10;}
+A:link {COLOR: #004d00;	TEXT-DECORATION: none;font-size: 9pt;}
+A:active {COLOR: blue; TEXT-DECORATION: none/*TEXT-DECORATION: underline*/}
+A:visited {	COLOR: #004d00;	TEXT-DECORATION: none/*TEXT-DECORATION: underline*/;	font-size: 9pt;}
+A:hover {LEFT: 1px; COLOR: blue; POSITION: relative; TOP: 1px; TEXT-DECORATION: none/*TEXT-DECORATION: underline*/}

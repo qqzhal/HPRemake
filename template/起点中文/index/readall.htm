@@ -1,0 +1,113 @@
+<HTML><HEAD><meta http-equiv='Content-Type' content='text/html; charset=gb2312'>
+<script language=javascript src="ad.js"></script>
+<LINK href="cmfu.css" type=text/css rel=stylesheet>
+<script language=javascript src="../js/page.js"></script>
+</HEAD>
+<BODY oncontextmenu="return true" onselectstart="return true" oncopy="return true" id=bkk bgColor=#e7f4fe leftMargin=5 topMargin=5>
+<TABLE cellSpacing=0 cellPadding=0 width="95%" align=center border=0 valign="top">
+  <TBODY>
+  <TR>
+    <TD class=zt style="PADDING-TOP: 15px; BORDER-BOTTOM: green 1px solid" width=238><FONT color=red>&nbsp;&nbsp;读书在起点 · 创作无极限</FONT></TD>
+    <TD class=zt style="PADDING-TOP: 15px; BORDER-BOTTOM: green 1px solid" align=right>
+    『&nbsp;<A href=javascript:loadurl("index.htm",-1)>返回书目</A>&nbsp;』</TD></TR></TBODY></TABLE><BR><BR>
+<TABLE width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle width="100%"><SPAN style="FONT-SIZE: 18pt; COLOR: #990000; FONT-FAMILY: 楷体_GB2312"><B><A name=top>{书名}</A></B></SPAN> </TD></TR>
+  <TR>
+    <TD align=middle width="100%">
+      <TABLE width="95%" border=0>
+        <TBODY>
+<script language="JavaScript">
+var i = 0;
+var end = pages.length;
+while(i != end)
+{
+	document.write("<tr>");
+	for(nn = 1;nn < 5;nn++)
+	{
+		if (i == end)
+		{
+			if (nn == 1) break;
+			else document.write("<td width=25% height=25>&nbsp;&nbsp;</td>");
+		}
+		else
+		{
+			if (pages[i][3] != undefined)
+			{
+				if(nn == 1)
+				{
+					if (pages[i][3].substr(0,4) == "<img")
+					{
+						document.write("<td colspan=1 align=center>"+pages[i][3]+"</td><td colspan=3>"+pages[i][1]+"</td>");
+						nn=5;
+						i++;
+					}
+					else
+					{
+						document.write("<td colspan=4 height=32><p align=left><b>"+pages[i][3]+"</b></p></td>");
+						document.write("</tr></tr>");
+						document.write("<td width=25% height=25><a href=#"+pages[i][0]+">"+pages[i][1]+"</a></td>");
+						i++;
+					}
+				}
+				else document.write("<td width=25% height=25>&nbsp;&nbsp;</td>");
+			}
+			else
+			{
+				document.write("<td width=25% height=25><a href=#"+pages[i][0]+">"+pages[i][1]+"</a></td>");
+				i++;
+			}
+		}//if pages
+	}//for nn
+	document.write("</tr>");
+}//while
+</script></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+<TABLE width="95%" border=0 align=center>
+  <TBODY>
+  <TR>
+    <TD DIV id=content class=content align=left width=100%><BR>
+      <script language=javascript>
+for(i = 0;i < end;i++)
+{
+	loadtxt(i);
+}
+function gotoNextPage()
+{
+	if (window.event.keyCode == 13 || window.event.keyCode == 37) loadurl("index.htm",-1);
+}	
+document.onkeydown=gotoNextPage;
+</script>
+      <br><br></TD></TR></TBODY></TABLE>
+<TBODY>
+  <TR>
+    <TD class=tablebody1 style="BORDER-TOP: green 1px solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px" align=right width="100%">&nbsp;&nbsp; <div align=right><script language=javascript src='bottom.js'></script>&nbsp;&nbsp;&nbsp;</div></TD>
+  </TR>
+  </TBODY>
+<script language="Javascript">
+function saveSet()
+{
+	parent.bcolor1=bcolor.selectedIndex;
+	parent.txtcolor1=txtcolor.selectedIndex;
+	parent.fonttype1=fonttype.selectedIndex;
+
+}
+function loadSet()
+{
+	bcolor.selectedIndex = parent.bcolor1;
+	txtcolor.selectedIndex = parent.txtcolor1;
+	fonttype.selectedIndex = parent.fonttype1;
+	
+	bkk.style.background=bcolor.options[bcolor.selectedIndex].value;
+	content.style.cssText=fonttype.options[fonttype.selectedIndex].value+';line-height: 180%;padding-left:10;padding-right:10';
+	content.style.color=txtcolor.options[txtcolor.selectedIndex].value;
+}
+loadSet();
+</script>
+<table border=0 cellPadding=0 cellSpacing=0 width=95% valign=top align=center>
+	<tr>
+	<td width=100% align=center style="border-top:1px solid green;padding-top:5;padding-bottom:5" class=tablebody1><a href=javascript:loadurl("index.htm",-1)>返回书目</a><BR><BR></td>
+	</tr>
+</table>
+</body>
+</html>		
