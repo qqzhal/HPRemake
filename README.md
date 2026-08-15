@@ -16,7 +16,6 @@
 图形界面：
 
 ```powershell
-cd python
 python main.py
 ```
 
@@ -25,7 +24,6 @@ python main.py
 命令行：
 
 ```powershell
-cd python
 python main.py --file "book\诗经 多人.txt" --compile
 ```
 
@@ -40,7 +38,6 @@ python main.py --file book\书稿.txt --templates 默认模板 起点中文 --ou
 图形界面使用 `customtkinter` 美化。依赖清单见 `requirements.txt`，首次运行前手动安装一次即可：
 
 ```powershell
-cd python
 python -m pip install -r requirements.txt
 ```
 
