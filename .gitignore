@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 Ebook/
+!Ebook/.gitkeep
 settings/
 build/
 dist/
