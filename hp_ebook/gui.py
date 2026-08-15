@@ -510,8 +510,8 @@ class HpEbookApp:
             return
         self.file_var.set(path)
         book, author = extract_book_author(path)
-        self.book_var.set(book)
-        self.author_var.set(author)
+        self.book_var.set(book or "未知")
+        self.author_var.set(author or "未知")
         self._set_status(f"已载入：{Path(path).name}")
 
     def _parse_and_show(self) -> None:

@@ -22,7 +22,7 @@ def to_halfwidth(text: str) -> str:
 
 
 def extract_book_author(file_path: str | Path) -> tuple[str, str]:
-    """按原软件规则从文件名提取书名和作者。"""
+    """按原软件规则从文件名提取书名和作者，无法识别作者时以文件名为书名。"""
     name = Path(str(file_path)).name
     if "." in name:
         name = name[: name.rfind(".")]
@@ -38,7 +38,7 @@ def extract_book_author(file_path: str | Path) -> tuple[str, str]:
         return name[:last_space].rstrip(), name[last_space + 1 :]
     if last_space < last_close and last_close > 2:
         return name[: last_close + 1], name[last_close + 1 :].lstrip()
-    return "", ""
+    return name, ""
 
 
 def _encode_for_book(text: str) -> bytes:
@@ -116,8 +116,8 @@ def parse_book(
         inferred_book, inferred_author = extract_book_author(path)
         book_name = inferred_book if book_name is None else book_name
         author = inferred_author if author is None else author
-    if not book_name or not author:
-        raise ValueError("无法从文件名识别书名/作者，请手动指定 --book 和 --author")
+    book_name = book_name.strip() or "未知"
+    author = author.strip() or "未知"
 
     data = normalize_source_bytes(path.read_bytes())
     processed = preprocess_bytes(data)
